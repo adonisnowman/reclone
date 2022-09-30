@@ -1,0 +1,14 @@
+<meta name="baidu-site-verification" content="code-T5J2NlKtXz" />
+
+
+<meta name="google-site-verification" content="sUEe4x96bFAWyaFiSe_-9oHJKreCrrSCw3XBWpcsYzc" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MT55BX0SQ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MT55BX0SQ7');
+</script>
