@@ -549,7 +549,7 @@ class IndexController extends BaseController
         }
 
 
-        if (file_exists("seo/" . ((is_numeric(substr($_SERVER['SERVER_NAME'], 0, 1))) ? "_" : "") . $_SERVER['SERVER_NAME']))
+        if (file_exists("seo/" . $_SERVER['SERVER_NAME']))
             $header = file_get_contents("seo/" . $_SERVER['SERVER_NAME']);
         else $header = "";
 
