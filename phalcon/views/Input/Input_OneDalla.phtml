@@ -1,0 +1,208 @@
+<!--
+ =========================================================
+* Material Dashboard 2 PRO - v3.0.2
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/material-dashboard-pro 
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <?php echo $header; ?>
+</head>
+
+<body class="g-sidenav-show bg-gray-200" ng-app="Admin">
+      <!-- Extra details for Live View on GitHub Pages -->
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+      <?php echo $aside; ?>
+      <main class="main-content max-height-vh-100 h-100" ng-controller="AdminController as Admin">
+            <?php echo $nav; ?>
+            <div class="container-fluid my-3 py-3">
+                  <div class="row mb-5">
+                        <div class="col-lg-3">
+                              <div class="input-group input-group-outline" ng-class="(Admin.Search)?'is-filled':''">
+                                    <label class="form-label">OneDalla</label>
+                                    <input type="text" class="form-control" ng-model="Admin.Search">
+                              </div>
+                              <div class="card position-sticky top-1" style="height: 70vh;overflow: scroll;">
+                                    <ul class="nav flex-column bg-white border-radius-lg p-3">
+                                          <li class="nav-item" ng-repeat=" item in Admin.OneDalla | filter : Admin.Search">
+                                                <a class="nav-link text-dark d-flex" data-scroll="">
+                                                      <div class="">
+                                                            <h6 class="text-dark font-weight-bold mb-0">{{item}}</h6>
+                                                      </div>
+                                                </a>
+                                          </li>
+                                    </ul>
+                                    <div img-upload method="PUT" url="image/OneDalla" ng-model="Admin.OneDalla"></div>
+                              </div>
+                        </div>
+                        <div class="col-lg-3">
+                              <div class="input-group input-group-outline" ng-class="(Admin.Search)?'is-filled':''">
+                                    <label class="form-label">CathayBk</label>
+                                    <input type="text" class="form-control" ng-model="Admin.Search">
+                              </div>
+                              <div class="card position-sticky top-1" style="height: 70vh;overflow: scroll;">
+                                    <ul class="nav flex-column bg-white border-radius-lg p-3">
+                                          <li class="nav-item" ng-repeat=" item in Admin.CathayBk | filter : Admin.Search">
+                                                <a class="nav-link text-dark d-flex" data-scroll="">
+                                                      <div class="">
+                                                            <h6 class="text-dark font-weight-bold mb-0">{{item}}</h6>
+                                                      </div>
+                                                </a>
+                                          </li>
+                                    </ul>
+                                    <div img-upload method="PUT" url="image/CathayBk" ng-model="Admin.CathayBk"></div>
+                              </div>
+                        </div>
+                        <div class="col-lg-3">
+                              <div class="input-group input-group-outline" ng-class="(Admin.Search)?'is-filled':''">
+                                    <label class="form-label">CtbcBank</label>
+                                    <input type="text" class="form-control" ng-model="Admin.Search">
+                              </div>
+                              <div class="card position-sticky top-1" style="height: 70vh;overflow: scroll;">
+                                    <ul class="nav flex-column bg-white border-radius-lg p-3">
+                                          <li class="nav-item" ng-repeat=" item in Admin.CtbcBank | filter : Admin.Search">
+                                                <a class="nav-link text-dark d-flex" data-scroll="">
+                                                      <div class="">
+                                                            <h6 class="text-dark font-weight-bold mb-0">{{item}}</h6>
+                                                      </div>
+                                                </a>
+                                          </li>
+                                    </ul>
+                                    <div img-upload method="PUT" url="image/CtbcBank" ng-model="Admin.CtbcBank"></div>
+                              </div>
+                        </div>
+                        <div class="col-lg-3">
+                              <div class="input-group input-group-outline" ng-class="(Admin.Search)?'is-filled':''">
+                                    <label class="form-label">KgiBank</label>
+                                    <input type="text" class="form-control" ng-model="Admin.Search">
+                              </div>
+                              <div class="card position-sticky top-1" style="height: 70vh;overflow: scroll;">
+                                    <ul class="nav flex-column bg-white border-radius-lg p-3">
+                                          <li class="nav-item" ng-repeat=" item in Admin.KgiBank | filter : Admin.Search">
+                                                <a class="nav-link text-dark d-flex" data-scroll="">
+                                                      <div class="">
+                                                            <h6 class="text-dark font-weight-bold mb-0">{{item}}</h6>
+                                                      </div>
+                                                </a>
+                                          </li>
+                                    </ul>
+                                    <div img-upload method="PUT" url="image/KgiBank" ng-model="Admin.KgiBank"></div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </main>
+      <script>
+            adonis.controller('AdminController', ['sharedData', '$scope', '$http', function(sharedData, $scope, $http) {
+                  var Admin = this;
+
+                  if (location.pathname == "/logout") location.href = '';
+                  Admin.ReDirect = function(ReDirect) {
+                        console.info(ReDirect);
+                        sharedData.ReDirect(ReDirect);
+                  }
+                  Admin.Logout = function() {
+                        console.info("adoni");
+                        sharedData.Logout(ReDirect);
+                  }
+
+                  Admin.OneDalla = [];
+                  Admin.CathayBk = [];
+                  Admin.CtbcBank = [];
+                  Admin.KgiBank = [];
+                  Admin.Input_Accounts = {};
+                  Admin.Input_Accounts.UniqueID = "";
+                  Admin.AccountsPages = {};
+                  Admin.Accounts = function() {
+                        var Accounts = {
+                              "UniqueID": "",
+                              'Pages': Admin.AccountsPages,
+                        }
+                        var data = {
+                              'UniqueID': '',
+                              'Action': 'Accounts',
+                              'Data': JSON.stringify(Accounts),
+                        }
+                        var promise = sharedData.List(data);
+
+                        promise.then(function(data) { // 呼叫承諾API獲取資料 .resolve  
+                              Admin.Accounts_List = data.List;
+                              Admin.AccountsPages = data.Pages;
+                        }, function(data) { // 處理錯誤 .reject  
+                              console.info(data);
+                        });
+
+                  };
+                  Admin.Accounts();
+                  Admin.Edit = function() {
+                        var data = {
+                              'UniqueID': '',
+                              'Action': 'Input_Accounts',
+                              'Data': JSON.stringify(Admin.Input_Accounts),
+                        }
+                        sharedData.Edit(data);
+                        Admin.Accounts();
+                  };
+
+
+            }]);
+      </script>
+      <!--   Core JS Files   -->
+      <script src="material-dashboard-master/assets/js/core/popper.min.js"></script>
+      <script src="material-dashboard-master/assets/js/core/bootstrap.min.js"></script>
+      <script src="material-dashboard-master/assets/js/plugins/perfect-scrollbar.min.js"></script>
+      <script src="material-dashboard-master/assets/js/plugins/smooth-scrollbar.min.js"></script>
+      <script src="material-dashboard-master/assets/js/plugins/choices.min.js"></script>
+      <!-- Kanban scripts -->
+      <script src="material-dashboard-master/assets/js/plugins/dragula/dragula.min.js"></script>
+      <script src="material-dashboard-master/assets/js/plugins/jkanban/jkanban.js"></script>
+
+      <script>
+            if (document.getElementById('choices-gender')) {
+                  var gender = document.getElementById('choices-gender');
+                  const example = new Choices(gender);
+            }
+
+            if (document.getElementById('choices-language')) {
+                  var language = document.getElementById('choices-language');
+                  const example = new Choices(language);
+            }
+
+            if (document.getElementById('choices-skills')) {
+                  var skills = document.getElementById('choices-skills');
+                  const example = new Choices(skills, {
+                        delimiter: ',',
+                        editItems: true,
+                        maxItemCount: 20,
+                        removeItemButton: true,
+                        addItems: true
+                  });
+            }
+      </script>
+      <script>
+            var win = navigator.platform.indexOf('Win') > -1;
+            if (win && document.querySelector('#sidenav-scrollbar')) {
+                  var options = {
+                        damping: '0.5'
+                  }
+                  Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+            }
+      </script>
+      <!-- Github buttons -->
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+      <script src="material-dashboard-master/assets/js/material-dashboard.min.js?v=3.0.2"></script>
+</body>
+
+</html>

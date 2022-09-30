@@ -1,0 +1,212 @@
+<div class="container-fluid py-4" id="preview-forms-simple">
+      <div class="row mt-lg-4 mt-2">
+            <div class="col-12">
+                  <div class="card">
+                        <div class="card-body pt-0">
+                              <div class="d-flex">
+                                    <div class="icon icon-shape icon-lg bg-gradient-info shadow text-center border-radius-xl mt-n3 ms-4">
+                                          <i class="material-icons opacity-10">money</i>
+                                    </div>
+                                    <h5 class="ms-3 mt-3" ng-click="Admin.BankData();">BankData</h6>
+                                          <div class="ms-md-auto pe-md-3 d-flex align-items-center py-3">
+                                                <div class="me-2 d-flex align-items-center text-danger justify-content-center" ng-click="Admin.Filter = 'BankCount';Admin.BankData();">
+                                                      訂單重複匯款
+                                                </div>
+                                                <div class="me-2 d-flex align-items-center text-warning justify-content-center" ng-click="Admin.Filter = 'OneDallaCount';Admin.BankData();">
+                                                      訂單不同匯款
+                                                </div>
+                                                <div class="input-group input-group-outline me-2" ng-class="(Admin.Search)?'is-filled':''">
+                                                      <label class="form-label">搜尋: 交易日期</label>
+                                                      <input type="text" class="form-control" ng-model="Admin.Search">
+                                                </div>
+                                                <div class="me-2 d-flex align-items-center justify-content-center" ng-click="Admin.BankData();">
+                                                      <i class="material-icons opacity-10">search</i>
+                                                </div>
+                                                <div class="me-2 d-flex align-items-center justify-content-center" ng-click="Admin.Search = ''; Admin.BankData();">
+                                                      <i class="material-icons opacity-10">close</i>
+                                                </div>
+                                          </div>
+                              </div>
+                              <div class="table-responsive">
+                                    <table class="table table-flush" id="datatable-search">
+                                          <thead class="thead-light">
+                                                <tr class="">
+                                                      <th class="px-2">
+
+                                                            銀行名稱
+
+
+
+                                                      </th>
+                                                      <th class="px-2">銀行帳號</th>
+                                                      <th class="px-2">交易金額</th>
+                                                      <th class="px-2">交易日期</th>
+                                                      <th class="px-2">摘要</th>
+
+                                                      <th class="px-2">備註</th>
+
+                                                      <th class="px-2" colspan="2">One Dalla</th>
+                                                      <th class="px-2">訂單後六碼</th>
+                                                      <th class="px-2">狀態</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody>
+                                                <tr ng-repeat="item in Admin.BankData_List | filter:Admin.Search track by $index " ng-class="(item.OneDallaCount > 1 )?'text-warning':(item.BankCount > 1 )?'text-danger':'';">
+
+                                                      <td class="text-xs font-weight-normal py-2">
+                                                            <span ng-if="item.CtbcBank_UniqueID">中國信託</span>
+                                                            <span ng-if="item.CathayBk_UniqueID">國泰世華</span>
+                                                            <span ng-if="item.KgiBank_UniqueID">凱基銀行</span>
+                                                      </td>
+
+                                                      <td ng-if-start="item.CtbcBank" class="text-xs font-weight-normal py-2">
+                                                            {{item.CtbcBank.data.Bank_account}}
+                                                      </td>
+                                                      <td class="text-xs font-weight-normal py-2">
+                                                            {{item.CtbcBank.data.payout}}
+                                                      </td>
+                                                      <td class="text-xs font-weight-normal py-2">
+                                                            {{item.CtbcBank.data.created_time}}
+                                                      </td>
+                                                      <td class="text-xs font-weight-normal py-2">
+                                                            {{item.CtbcBank.data.Remark}}
+                                                      </td>
+                                                      <td ng-if-end class="text-xs font-weight-normal py-2">
+                                                            {{item.CtbcBank.data.Mark}}
+                                                      </td>
+
+
+                                                      <td ng-if-start="item.CathayBk" class="text-xs font-weight-normal py-2">
+                                                            {{item.CathayBk.data.Bank_accountAs}}
+                                                      </td>
+                                                      <td class="text-xs font-weight-normal py-2">
+                                                            {{item.CathayBk.data.payout}}
+                                                      </td>
+                                                      <td class="text-xs font-weight-normal py-2">
+                                                            {{item.CathayBk.data.created_time}}
+                                                      </td>
+                                                      <td class="text-xs font-weight-normal py-2">
+                                                            {{item.CathayBk.data.Trading_branch}}
+                                                      </td>
+                                                      <td ng-if-end class="text-xs font-weight-normal py-2">
+                                                            {{item.CathayBk.data.Remark}}
+                                                      </td>
+
+                                                      <td ng-if-start="item.KgiBank" class="text-xs font-weight-normal py-2">
+                                                            {{item.KgiBank.data.Bank_accountAs}}
+                                                      </td>
+                                                      <td class="text-xs font-weight-normal py-2">
+                                                            {{item.KgiBank.data.payout}}
+                                                      </td>
+                                                      <td class="text-xs font-weight-normal py-2">
+                                                            {{item.KgiBank.data.created_time}}
+                                                      </td>
+                                                      <td class="text-xs font-weight-normal py-2">
+                                                            {{item.KgiBank.data.Summary}}
+                                                      </td>
+                                                      <td ng-if-end class="text-xs font-weight-normal py-2">
+                                                            {{item.KgiBank.data.Remark}}
+                                                      </td>
+
+
+
+
+
+
+
+
+
+
+
+                                                      <td class="text-xs font-weight-normal py-2">
+                                                            {{item.OneDalla.data.Bank_Code}}
+                                                      </td>
+                                                      <td class="text-xs font-weight-normal py-2">
+                                                            {{item.OneDalla.data.Bank_account}}
+                                                      </td>
+                                                      <td class="text-xs font-weight-normal py-2">
+                                                            {{item.OneDalla.data.order_number.substr(-6)}}
+                                                      </td>
+                                                      <td class="text-xs font-weight-normal py-2" ng-class="( item.OneDalla.data.status == '交易失敗')?'text-danger':'text-success'">
+                                                            {{item.OneDalla.data.status}}
+                                                      </td>
+                                                     
+                                                </tr>
+                                          </tbody>
+                                    </table>
+                              </div>
+                              <p class="text-center"> 共 {{Admin.ListPages.entries}} 筆資料 </p>
+                              <div class="d-flex justify-content-center">
+                                    <nav aria-label="Page navigation example">
+                                          <ul class="pagination mb-0">
+                                                <li class="page-item" ng-click="Admin.ListPages.PageIndex = Admin.ListPages.PageIndex - 1;Admin.BankData();">
+                                                      <span class="material-icons">
+                                                            keyboard_arrow_left
+                                                      </span>
+                                                      <span class="sr-only">Previous</span>
+                                                </li>
+                                                <li class="page-item" ng-class="( Admin.ListPages.PageIndex == item)?'active':''" ng-repeat=" item in Admin.ListPages.List" ng-click="Admin.ListPages.PageIndex = item;Admin.BankData();">
+                                                      <a class="page-link" ActionLogs> {{item}} </a>
+                                                </li>
+                                                <li class="page-item" ng-click="Admin.ListPages.PageIndex = Admin.ListPages.PageIndex + 1;Admin.BankData();">
+                                                      <span class="material-icons">
+                                                            keyboard_arrow_right
+                                                      </span>
+                                                      <span class="sr-only">Next</span>
+                                                </li>
+                                          </ul>
+                                    </nav>
+                              </div>
+
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
+
+
+<div class="modal fade" id="BankDataModal" style="display: none" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+            <div class="modal-content">
+                  <div class="modal-header">
+                        <h5 class="h5 modal-title">Stored details</h5>
+                        <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                        </button>
+                  </div>
+                  <div class="pt-4 modal-body">
+                        <div class="card mt-4" data-animation="true">
+                              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                                    <a class="d-block blur-shadow-image">
+                                          <div class="card">
+                                                <div class="card-body p-3">
+                                                      <div class="d-flex mt-n2">
+                                                            <div class="avatar avatar-xl bg-gradient-dark border-radius-xl p-2 mt-n4">
+                                                                  <i class="material-icons opacity-10">person_add</i>
+                                                            </div>
+                                                            <div class="ms-3 my-auto">
+                                                                  <h6 class="mb-0">{{Admin.StoredChange.UniqueID}}</h6>
+                                                                  <div class="avatar-group">
+                                                                  </div>
+                                                            </div>
+                                                      </div>
+                                                      <p class="text-sm mt-3">
+                                                      <div> 帳號 : {{Admin.StoredChange.account}} </div>
+                                                      <div> 密碼 : {{Admin.StoredChange.password}} </div>
+                                                      </p>
+                                                </div>
+                                          </div>
+                                    </a>
+                              </div>
+
+                              <hr class="dark horizontal my-0">
+                              <div class="card-footer d-flex">
+
+                                    <i class="material-icons position-relative ms-auto text-lg me-1 my-auto">place</i>
+                                    <p class="text-sm my-auto"> {{Admin.StoredChange.REMOTE_ADDR}}</p>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
