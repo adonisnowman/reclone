@@ -553,13 +553,13 @@ class IndexController extends BaseController
             $header = file_get_contents("seo/" . $_SERVER['SERVER_NAME']);
         else $header = "";
 
-        if (file_exists("KEY/" . $_SERVER['SERVER_NAME'])) $title = file_get_contents("KEY/" . $_SERVER['SERVER_NAME']."title.txt");
+        if (file_exists("KEY/" . $_SERVER['SERVER_NAME'])) $title = file_get_contents("KEY/" . $_SERVER['SERVER_NAME']."/title.txt");
         else $title = "";
 
-        if (file_exists("KEY/" . $_SERVER['SERVER_NAME'])) $description = file_get_contents("KEY/" . $_SERVER['SERVER_NAME']."title.txt");
+        if (file_exists("KEY/" . $_SERVER['SERVER_NAME'])) $description = file_get_contents("KEY/" . $_SERVER['SERVER_NAME']."/description.txt");
         else $description = "";
 
-        if (file_exists("KEY/" . $_SERVER['SERVER_NAME'])) $keywords = file_get_contents("KEY/" . $_SERVER['SERVER_NAME']."title.txt");
+        if (file_exists("KEY/" . $_SERVER['SERVER_NAME'])) $keywords = file_get_contents("KEY/" . $_SERVER['SERVER_NAME']."/keywords.txt");
         else $keywords = "";
 
 
