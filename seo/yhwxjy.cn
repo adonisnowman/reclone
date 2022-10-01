@@ -1,0 +1,13 @@
+<meta name="baidu-site-verification" content="code-D9XAaT4iMh" />
+
+<meta name="google-site-verification" content="Hf85iZWGNPANjlUFTK8w0N6zKvp29n3iPzoIT0qKu7c" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6DP24DVFMZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6DP24DVFMZ');
+</script>

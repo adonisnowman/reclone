@@ -1,4 +1,4 @@
-<meta mame="baidu-site-verification" content="code-Mc6sFY5d4y" />
+<meta name="baidu-site-verification" content="code-Mc6sFY5d4y" />
 
 <meta name="google-site-verification" content="AG52mqHMKvtlSejfFxgOH4eD-9q-tJp2o9xwaJ4y5tc" />
 
