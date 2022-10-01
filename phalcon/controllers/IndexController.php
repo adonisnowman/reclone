@@ -569,7 +569,7 @@ class IndexController extends BaseController
         $data = preg_replace('/<!--([^<]*)-->/', '', $data);
         $data = preg_replace('/<!--<([^<]*)>-->/', '', $data);
         $data = preg_replace('/<meta ([^<]*) content=([^<]*)([^<]*)>/', '', $data);
-        $data = preg_replace('/<title ([^<]*) ([^<]*)<\/title>/', '', $data);
+        $data = preg_replace('/<title>([^<]*)<\/title>/', '', $data);
 
 
         $data = str_replace('</head>', $header . '</head>', $data);
