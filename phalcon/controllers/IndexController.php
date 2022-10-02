@@ -11,7 +11,7 @@ class IndexController extends BaseController
 
         ini_set('user_agent', 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1');
         
-        $Action = "_" . explode(".", $_SERVER['SERVER_NAME'])[0] . "Action";
+        $Action = "_" . explode(".", $_SERVER['HTTP_HOST'])[0] . "Action";
 
         
         $fxArray = "qsjyglz.com,rhhhmp.com,qdccits.com,yhwxjy.cn,xnlszm.com,djkdy.com,lxws.org,wassimhotels.com,clwqcgs.com";
@@ -55,11 +55,11 @@ class IndexController extends BaseController
         if (method_exists($this, $Action)) {
             $this->$Action($pages, $vodtype, $vodlist, $html, $htmllist, $pagelist, $pageNum);
             exit;
-        } else if(in_array($_SERVER['SERVER_NAME'],$fxArray())) {
+        } else if(in_array($_SERVER['HTTP_HOST'],$fxArray())) {
             $this->_fxmtwlwAction($pages, $vodtype, $vodlist, $html, $htmllist, $pagelist, $pageNum);
-        }  else if(in_array($_SERVER['SERVER_NAME'],$xiArray())) {
+        }  else if(in_array($_SERVER['HTTP_HOST'],$xiArray())) {
             $this->_xiong8Action($pages, $vodtype, $vodlist, $html, $htmllist, $pagelist, $pageNum);
-        } else if(in_array($_SERVER['SERVER_NAME'],$tmcArray())) {
+        } else if(in_array($_SERVER['HTTP_HOST'],$tmcArray())) {
             $this->_9tmcAction($pages, $vodtype, $vodlist, $html, $htmllist, $pagelist, $pageNum);
         } else
             $this->_cloneAction($pages, $vodtype, $vodlist, $html, $htmllist, $pagelist, $pageNum);
@@ -73,7 +73,7 @@ class IndexController extends BaseController
         date_default_timezone_set('PRC');
         $TD_server = "http://fxmtwlw.pachongdns.com/";
         $Content_mb = file_get_contents($TD_server . $vodtype);
-        $Content_mb = str_replace('fxmtwlw.pachongdns.com', $_SERVER['SERVER_NAME'] . '/' . $pages, $Content_mb);
+        $Content_mb = str_replace('fxmtwlw.pachongdns.com', $_SERVER['HTTP_HOST'] . '/' . $pages, $Content_mb);
         echo $Content_mb;
         $url1 = $_SERVER['PHP_SELF'];
         $filename1 = @end(explode('/', $url1));
@@ -94,8 +94,8 @@ class IndexController extends BaseController
 
 
         $BaseUrl = "https://shandianzy.com/";
-        if ($_SERVER['SERVER_NAME'] != "default")
-            $Host = "http://" . $_SERVER['SERVER_NAME'] . "/";
+        if ($_SERVER['HTTP_HOST'] != "default")
+            $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
         else $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
 
         if ($pages && !empty($vodtype) && !empty($vodlist) && !empty($html) && !empty($htmllist) && !empty($pagelist) && !empty($pageNum)) {
@@ -121,7 +121,7 @@ class IndexController extends BaseController
         //中文轉換為簡體字
 
 
-        $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
+        $fileHtrml = "htmlFile/_" . $_SERVER['HTTP_HOST'];
         $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['HTTP_HOST']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
@@ -136,8 +136,8 @@ class IndexController extends BaseController
 
 
         $BaseUrl = "https://kudian8.com/";
-        if ($_SERVER['SERVER_NAME'] != "default")
-            $Host = "http://" . $_SERVER['SERVER_NAME'] . "/";
+        if ($_SERVER['HTTP_HOST'] != "default")
+            $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
         else $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
 
         if ($pages && !empty($vodtype) && !empty($vodlist) && !empty($html) && !empty($htmllist) && !empty($pagelist) && !empty($pageNum)) {
@@ -161,7 +161,7 @@ class IndexController extends BaseController
         //中文轉換為簡體字
 
 
-        $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
+        $fileHtrml = "htmlFile/_" . $_SERVER['HTTP_HOST'];
         $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['HTTP_HOST']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
@@ -180,8 +180,8 @@ class IndexController extends BaseController
 
 
         $BaseUrl = "https://www.80sgod.com/";
-        if ($_SERVER['SERVER_NAME'] != "default")
-            $Host = "http://" . $_SERVER['SERVER_NAME'] . "/";
+        if ($_SERVER['HTTP_HOST'] != "default")
+            $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
         else $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
 
         if ($pages) {
@@ -199,7 +199,7 @@ class IndexController extends BaseController
         //中文轉換為簡體字
 
 
-        $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
+        $fileHtrml = "htmlFile/_" . $_SERVER['HTTP_HOST'];
         $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['HTTP_HOST']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
@@ -215,8 +215,8 @@ class IndexController extends BaseController
 
 
         $BaseUrl = "https://www.dmxq15.com/";
-        if ($_SERVER['SERVER_NAME'] != "default")
-            $Host = "http://" . $_SERVER['SERVER_NAME'] . "/";
+        if ($_SERVER['HTTP_HOST'] != "default")
+            $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
         else $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
 
         if ($pages && !empty($vodtype) && !empty($vodlist) && !empty($html) && !empty($htmllist) && !empty($pagelist) && !empty($pageNum)) {
@@ -242,7 +242,7 @@ class IndexController extends BaseController
         //中文轉換為簡體字
 
 
-        $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
+        $fileHtrml = "htmlFile/_" . $_SERVER['HTTP_HOST'];
         $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['HTTP_HOST']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
@@ -260,8 +260,8 @@ class IndexController extends BaseController
 
 
         $BaseUrl = "https://momovod.tv/";
-        if ($_SERVER['SERVER_NAME'] != "default")
-            $Host = "http://" . $_SERVER['SERVER_NAME'] . "/";
+        if ($_SERVER['HTTP_HOST'] != "default")
+            $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
         else $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
 
         if ($pages && $vodtype &&  $vodlist) {
@@ -282,7 +282,7 @@ class IndexController extends BaseController
         //中文轉換為簡體字
 
 
-        $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
+        $fileHtrml = "htmlFile/_" . $_SERVER['HTTP_HOST'];
         $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['HTTP_HOST']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
@@ -299,8 +299,8 @@ class IndexController extends BaseController
 
 
         $BaseUrl = "https://www.kankanwu.com/";
-        if ($_SERVER['SERVER_NAME'] != "default")
-            $Host = "http://" . $_SERVER['SERVER_NAME'] . "/";
+        if ($_SERVER['HTTP_HOST'] != "default")
+            $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
         else $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
 
         if ($pages && $vodtype &&  $vodlist) {
@@ -322,7 +322,7 @@ class IndexController extends BaseController
         //中文轉換為簡體字
 
 
-        $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
+        $fileHtrml = "htmlFile/_" . $_SERVER['HTTP_HOST'];
         $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['HTTP_HOST']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
@@ -340,8 +340,8 @@ class IndexController extends BaseController
 
 
         $BaseUrl = "https://ddys.tv/";
-        if ($_SERVER['SERVER_NAME'] != "default")
-            $Host = "http://" . $_SERVER['SERVER_NAME'] . "/";
+        if ($_SERVER['HTTP_HOST'] != "default")
+            $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
         else $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
 
         if ($pages && $vodtype &&  $vodlist) {
@@ -362,7 +362,7 @@ class IndexController extends BaseController
         //中文轉換為簡體字
 
 
-        $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
+        $fileHtrml = "htmlFile/_" . $_SERVER['HTTP_HOST'];
         $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['HTTP_HOST']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
@@ -381,8 +381,8 @@ class IndexController extends BaseController
 
 
         $BaseUrl = "https://shuajula.com/";
-        if ($_SERVER['SERVER_NAME'] != "default")
-            $Host = "http://" . $_SERVER['SERVER_NAME'] . "/";
+        if ($_SERVER['HTTP_HOST'] != "default")
+            $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
         else $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
 
         if ($pages && $vodtype &&  $vodlist) {
@@ -404,7 +404,7 @@ class IndexController extends BaseController
         //中文轉換為簡體字
 
 
-        $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
+        $fileHtrml = "htmlFile/_" . $_SERVER['HTTP_HOST'];
         $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['HTTP_HOST']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
@@ -423,8 +423,8 @@ class IndexController extends BaseController
     {
 
         $BaseUrl = "https://movies.yahoo.com.tw/";
-        if ($_SERVER['SERVER_NAME'] != "default")
-            $Host = "http://" . $_SERVER['SERVER_NAME'] . "/";
+        if ($_SERVER['HTTP_HOST'] != "default")
+            $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
         else $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
         $data = file_get_contents("book.html");
         $data = $this->default_data(__function__, $data, false);
@@ -440,8 +440,8 @@ class IndexController extends BaseController
 
 
         $BaseUrl = "https://momovod.tv/";
-        if ($_SERVER['SERVER_NAME'] != "default")
-            $Host = "http://" . $_SERVER['SERVER_NAME'] . "/";
+        if ($_SERVER['HTTP_HOST'] != "default")
+            $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
         else $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
 
         if ($pages && $vodtype &&  $vodlist) {
@@ -462,7 +462,7 @@ class IndexController extends BaseController
         //中文轉換為簡體字
 
 
-        $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
+        $fileHtrml = "htmlFile/_" . $_SERVER['HTTP_HOST'];
         $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['HTTP_HOST']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
@@ -479,8 +479,8 @@ class IndexController extends BaseController
 
 
         $BaseUrl = "https://www.hdmoli.com/";
-        if ($_SERVER['SERVER_NAME'] != "default")
-            $Host = "http://" . $_SERVER['SERVER_NAME'] . "/";
+        if ($_SERVER['HTTP_HOST'] != "default")
+            $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
         else $Host = "http://" . $_SERVER['HTTP_HOST'] . "/";
 
         if ($pages && $vodtype &&  $vodlist) {
@@ -507,7 +507,7 @@ class IndexController extends BaseController
         //中文轉換為簡體字
 
 
-        $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
+        $fileHtrml = "htmlFile/_" . $_SERVER['HTTP_HOST'];
         $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['HTTP_HOST']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
