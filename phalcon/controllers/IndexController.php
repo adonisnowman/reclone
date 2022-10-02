@@ -548,7 +548,8 @@ class IndexController extends BaseController
             chmod($fileHtrml, 0777);
         }
 
-
+        echo $_SERVER['HTTP_HOST'];
+        exit;
         if (file_exists("seo/" . $_SERVER['HTTP_HOST']))
             $header = file_get_contents("seo/" . $_SERVER['HTTP_HOST']);
         else $header = "";
