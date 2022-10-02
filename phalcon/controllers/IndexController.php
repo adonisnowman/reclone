@@ -457,7 +457,7 @@ class IndexController extends BaseController
         $data = str_replace('"' . $BaseUrl . '"', '"' . $Host . '"', $data);
         $data = str_replace('/template/', $BaseUrl . 'template/', $data);
         $data = str_replace('/static/', $BaseUrl . 'static/', $data);
-        $data = str_replace('/header/', $BaseUrl . 'header/', $data);
+        $data = str_replace('header', $BaseUrl . 'head', $data);
 
 
         //中文轉換為簡體字
