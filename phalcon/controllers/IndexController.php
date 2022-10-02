@@ -572,7 +572,7 @@ class IndexController extends BaseController
         $data = preg_replace('/<title>([^<]*)<\/title>/', '', $data);
 
 
-        $data = str_replace('<head>', '<head>\r\n'.$header, $data);
+        $data = str_replace("<head>", "<head>\r\n".$header, $data);
 
 
         return $data;
