@@ -392,7 +392,7 @@ class IndexController extends BaseController
         } else $url = $BaseUrl;
 
         $data = Tools::httpGet($url);
-        $data = str_replace('header', $BaseUrl . 'head', $data);
+        $data = str_replace('header', 'head', $data);
         $data = $this->default_data(__function__, $data, false);
         //全域網址取代
 
