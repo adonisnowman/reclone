@@ -122,7 +122,7 @@ class IndexController extends BaseController
 
 
         $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
-        $fileName =  $fileHtrml . "/file_" . md5($url) . ".html";
+        $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['SERVER_NAME']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
             exit;
@@ -162,7 +162,7 @@ class IndexController extends BaseController
 
 
         $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
-        $fileName =  $fileHtrml . "/file_" . md5($url) . ".html";
+        $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['SERVER_NAME']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
             exit;
@@ -200,7 +200,7 @@ class IndexController extends BaseController
 
 
         $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
-        $fileName =  $fileHtrml . "/file_" . md5($url) . ".html";
+        $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['SERVER_NAME']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
             exit;
@@ -243,7 +243,7 @@ class IndexController extends BaseController
 
 
         $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
-        $fileName =  $fileHtrml . "/file_" . md5($url) . ".html";
+        $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['SERVER_NAME']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
             exit;
@@ -283,7 +283,7 @@ class IndexController extends BaseController
 
 
         $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
-        $fileName =  $fileHtrml . "/file_" . md5($url) . ".html";
+        $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['SERVER_NAME']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
             exit;
@@ -323,7 +323,7 @@ class IndexController extends BaseController
 
 
         $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
-        $fileName =  $fileHtrml . "/file_" . md5($url) . ".html";
+        $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['SERVER_NAME']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
             exit;
@@ -363,7 +363,7 @@ class IndexController extends BaseController
 
 
         $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
-        $fileName =  $fileHtrml . "/file_" . md5($url) . ".html";
+        $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['SERVER_NAME']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
             exit;
@@ -405,7 +405,7 @@ class IndexController extends BaseController
 
 
         $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
-        $fileName =  $fileHtrml . "/file_" . md5($url) . ".html";
+        $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['SERVER_NAME']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
             exit;
@@ -463,7 +463,7 @@ class IndexController extends BaseController
 
 
         $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
-        $fileName =  $fileHtrml . "/file_" . md5($url) . ".html";
+        $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['SERVER_NAME']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
             exit;
@@ -508,7 +508,7 @@ class IndexController extends BaseController
 
 
         $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
-        $fileName =  $fileHtrml . "/file_" . md5($url) . ".html";
+        $fileName =  $fileHtrml . "/file_" . md5($url.$_SERVER['SERVER_NAME']) . ".html";
         if (file_exists($fileName)) {
             echo file_get_contents($fileName);
             exit;
