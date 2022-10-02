@@ -542,24 +542,24 @@ class IndexController extends BaseController
         }
 
 
-        $fileHtrml = "htmlFile/_" . $_SERVER['SERVER_NAME'];
+        $fileHtrml = "htmlFile/_" . $_SERVER['HTTP_HOST'];
         if (file_exists($fileHtrml) == false) {
             mkdir($fileHtrml);
             chmod($fileHtrml, 0777);
         }
 
 
-        if (file_exists("seo/" . $_SERVER['SERVER_NAME']))
-            $header = file_get_contents("seo/" . $_SERVER['SERVER_NAME']);
+        if (file_exists("seo/" . $_SERVER['HTTP_HOST']))
+            $header = file_get_contents("seo/" . $_SERVER['HTTP_HOST']);
         else $header = "";
 
-        if (file_exists("KEY/" . $_SERVER['SERVER_NAME'])) $title = file_get_contents("KEY/" . $_SERVER['SERVER_NAME']."/title.txt");
+        if (file_exists("KEY/" . $_SERVER['HTTP_HOST'])) $title = file_get_contents("KEY/" . $_SERVER['HTTP_HOST']."/title.txt");
         else $title = "";
 
-        if (file_exists("KEY/" . $_SERVER['SERVER_NAME'])) $description = file_get_contents("KEY/" . $_SERVER['SERVER_NAME']."/description.txt");
+        if (file_exists("KEY/" . $_SERVER['HTTP_HOST'])) $description = file_get_contents("KEY/" . $_SERVER['HTTP_HOST']."/description.txt");
         else $description = "";
 
-        if (file_exists("KEY/" . $_SERVER['SERVER_NAME'])) $keywords = file_get_contents("KEY/" . $_SERVER['SERVER_NAME']."/keywords.txt");
+        if (file_exists("KEY/" . $_SERVER['HTTP_HOST'])) $keywords = file_get_contents("KEY/" . $_SERVER['HTTP_HOST']."/keywords.txt");
         else $keywords = "";
 
 
