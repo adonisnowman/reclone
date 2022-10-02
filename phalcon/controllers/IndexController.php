@@ -392,6 +392,7 @@ class IndexController extends BaseController
         } else $url = $BaseUrl;
 
         $data = Tools::httpGet($url);
+        $data = str_replace('header', $BaseUrl . 'head', $data);
         $data = $this->default_data(__function__, $data, false);
         //全域網址取代
 
@@ -457,7 +458,6 @@ class IndexController extends BaseController
         $data = str_replace('"' . $BaseUrl . '"', '"' . $Host . '"', $data);
         $data = str_replace('/template/', $BaseUrl . 'template/', $data);
         $data = str_replace('/static/', $BaseUrl . 'static/', $data);
-        
 
 
         //中文轉換為簡體字
@@ -573,7 +573,7 @@ class IndexController extends BaseController
 
 
         $data = str_replace("<head>", "<head>\r\n".$header, $data);
-        $data = str_replace("<header>", "<header>\r\n".$header, $data);
+
 
         return $data;
     }
