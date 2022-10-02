@@ -563,7 +563,7 @@ class IndexController extends BaseController
         else $keywords = "";
 
 
-        $header = "<title>{$title}</title><meta name=\"keywords\" content=\"{$keywords}\"/><meta name=\"description\" content=\"{$description}\"/>".$header;
+        $header = "<title>{$title}</title>\r\n<meta name=\"keywords\" content=\"{$keywords}\"/>\r\n<meta name=\"description\" content=\"{$description}\"/>".$header;
 
 
         $data = preg_replace('/<!--([^<]*)-->/', '', $data);
@@ -572,7 +572,7 @@ class IndexController extends BaseController
         $data = preg_replace('/<title>([^<]*)<\/title>/', '', $data);
 
 
-        $data = str_replace('</head>', $header . '</head>', $data);
+        $data = str_replace('<head>', '<head>\r\n'.$header, $data);
 
 
         return $data;
