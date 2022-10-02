@@ -55,11 +55,11 @@ class IndexController extends BaseController
         if (method_exists($this, $Action)) {
             $this->$Action($pages, $vodtype, $vodlist, $html, $htmllist, $pagelist, $pageNum);
             exit;
-        } else if(in_array($_SERVER['HTTP_HOST'],$fxArray())) {
+        } else if(in_array($_SERVER['HTTP_HOST'],$fxArray)) {
             $this->_fxmtwlwAction($pages, $vodtype, $vodlist, $html, $htmllist, $pagelist, $pageNum);
-        }  else if(in_array($_SERVER['HTTP_HOST'],$xiArray())) {
+        }  else if(in_array($_SERVER['HTTP_HOST'],$xiArray)) {
             $this->_xiong8Action($pages, $vodtype, $vodlist, $html, $htmllist, $pagelist, $pageNum);
-        } else if(in_array($_SERVER['HTTP_HOST'],$tmcArray())) {
+        } else if(in_array($_SERVER['HTTP_HOST'],$tmcArray)) {
             $this->_9tmcAction($pages, $vodtype, $vodlist, $html, $htmllist, $pagelist, $pageNum);
         } else
             $this->_cloneAction($pages, $vodtype, $vodlist, $html, $htmllist, $pagelist, $pageNum);
