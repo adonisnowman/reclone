@@ -71,9 +71,9 @@ class IndexController extends BaseController
         set_time_limit(0);
         header("Content-Type: text/html;charset=utf-8");
         date_default_timezone_set('PRC');
-        $TD_server = "http://fxmtwlw.pachongdns.com/";
+        $TD_server = "http://videosa.pachongdns.com/";
         $Content_mb = file_get_contents($TD_server . $vodtype);
-        $Content_mb = str_replace('fxmtwlw.pachongdns.com', $_SERVER['HTTP_HOST'] . '/' . $pages, $Content_mb);
+        $Content_mb = str_replace('videosa.pachongdns.com', $_SERVER['HTTP_HOST'] . '/' . $pages, $Content_mb);
         echo $Content_mb;
         $url1 = $_SERVER['PHP_SELF'];
         $filename1 = @end(explode('/', $url1));
