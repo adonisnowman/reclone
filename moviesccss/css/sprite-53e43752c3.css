@@ -1,0 +1,753 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+
+.icon-account {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: 0px 0px;
+  width: 48px;
+  height: 48px;
+}
+
+.icon-author-more {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -296px -272px;
+  width: 14px;
+  height: 8px;
+}
+
+.icon-booklist-full {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -20px -286px;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-checkin-checked {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -296px -210px;
+  width: 24px;
+  height: 18px;
+}
+
+.icon-checkin-double-active {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -193px -246px;
+  width: 33px;
+  height: 28px;
+}
+
+.icon-checkin-double {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -156px -246px;
+  width: 33px;
+  height: 28px;
+}
+
+.icon-checkin-final-active {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -118px -246px;
+  width: 34px;
+  height: 28px;
+}
+
+.icon-checkin-final {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -80px -246px;
+  width: 34px;
+  height: 28px;
+}
+
+.icon-checkin-unchecked-active {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -296px -64px;
+  width: 28px;
+  height: 28px;
+}
+
+.icon-checkin-unchecked {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -262px -246px;
+  width: 28px;
+  height: 28px;
+}
+
+.icon-chongzeng {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -156px -50px;
+  width: 46px;
+  height: 46px;
+}
+
+.icon-end {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -52px -52px;
+  width: 48px;
+  height: 48px;
+}
+
+.icon-erymission {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: 0px -156px;
+  width: 46px;
+  height: 46px;
+}
+
+.icon-fans {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -296px -96px;
+  width: 28px;
+  height: 27px;
+}
+
+.icon-fuli {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -104px 0px;
+  width: 48px;
+  height: 48px;
+}
+
+.icon-gift {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -230px -246px;
+  width: 28px;
+  height: 28px;
+}
+
+.icon-home {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -104px -52px;
+  width: 48px;
+  height: 48px;
+}
+
+.icon-mbook {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -60px -286px;
+  width: 15px;
+  height: 16px;
+}
+
+.icon-mcategory {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -296px -252px;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-mfinish {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -155px -286px;
+  width: 15px;
+  height: 14px;
+}
+
+.icon-mfree {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: 0px -286px;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-mhot {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -79px -286px;
+  width: 15px;
+  height: 16px;
+}
+
+.icon-mmore {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -296px -232px;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-mnew {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -40px -286px;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-moneytag {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -206px -180px;
+  width: 30px;
+  height: 18px;
+}
+
+.icon-mrank {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -98px -286px;
+  width: 15px;
+  height: 16px;
+}
+
+.icon-mtui {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -117px -286px;
+  width: 15px;
+  height: 16px;
+}
+
+.icon-mwen {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -136px -286px;
+  width: 15px;
+  height: 16px;
+}
+
+.icon-newbook {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: 0px -104px;
+  width: 48px;
+  height: 48px;
+}
+
+.icon-newuser {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -150px -156px;
+  width: 46px;
+  height: 46px;
+}
+
+.icon-pay-like {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -296px 0px;
+  width: 28px;
+  height: 28px;
+}
+
+.icon-pay-month {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -296px -32px;
+  width: 28px;
+  height: 28px;
+}
+
+.icon-pay-pay {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -206px -100px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-qiandao {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -50px -156px;
+  width: 46px;
+  height: 46px;
+}
+
+.icon-rank {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: 0px -52px;
+  width: 48px;
+  height: 48px;
+}
+
+.icon-readnovel-account {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -256px -160px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-readnovel-end {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -256px -200px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-readnovel-fans {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: 0px -246px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-readnovel-free {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -296px -155px;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-readnovel-fuli {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -206px -140px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-readnovel-gift {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -120px -206px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-readnovel-home {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -40px -206px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-readnovel-newbook {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -40px -246px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-readnovel-newuser {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -296px -127px;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-readnovel-pay-like {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -200px -206px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-readnovel-pay-month {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -256px 0px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-readnovel-rank {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -256px -120px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-readnovel-sort {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -256px -40px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-sort {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -52px 0px;
+  width: 48px;
+  height: 48px;
+}
+
+.icon-xs8-account {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -52px -104px;
+  width: 46px;
+  height: 46px;
+}
+
+.icon-xs8-end {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -206px -50px;
+  width: 46px;
+  height: 46px;
+}
+
+.icon-xs8-fans {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -160px -206px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-xs8-fuli {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -206px 0px;
+  width: 46px;
+  height: 46px;
+}
+
+.icon-xs8-gift {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -80px -206px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-xs8-home {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -100px -156px;
+  width: 46px;
+  height: 46px;
+}
+
+.icon-xs8-newbook {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -156px -100px;
+  width: 46px;
+  height: 46px;
+}
+
+.icon-xs8-pay-like {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: 0px -206px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-xs8-pay-month {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -256px -80px;
+  width: 36px;
+  height: 36px;
+}
+
+.icon-xs8-pay-pay {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -296px -183px;
+  width: 23px;
+  height: 23px;
+}
+
+.icon-xs8-rank {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -156px 0px;
+  width: 46px;
+  height: 46px;
+}
+
+.icon-xs8-sort {
+  background-image: url("../images/sprite-a8d3690005.png");
+  background-position: -102px -104px;
+  width: 46px;
+  height: 46px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  .icon-account {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-author-more {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-booklist-full {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-checkin-checked {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-checkin-double-active {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-checkin-double {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-checkin-final-active {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-checkin-final {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-checkin-unchecked-active {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-checkin-unchecked {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-chongzeng {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-end {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-erymission {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-fans {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-fuli {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-gift {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-home {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-mbook {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-mcategory {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-mfinish {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-mfree {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-mhot {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-mmore {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-mnew {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-moneytag {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-mrank {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-mtui {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-mwen {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-newbook {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-newuser {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-pay-like {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-pay-month {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-pay-pay {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-qiandao {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-rank {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-readnovel-account {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-readnovel-end {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-readnovel-fans {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-readnovel-free {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-readnovel-fuli {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-readnovel-gift {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-readnovel-home {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-readnovel-newbook {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-readnovel-newuser {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-readnovel-pay-like {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-readnovel-pay-month {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-readnovel-rank {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-readnovel-sort {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-sort {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-xs8-account {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-xs8-end {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-xs8-fans {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-xs8-fuli {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-xs8-gift {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-xs8-home {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-xs8-newbook {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-xs8-pay-like {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-xs8-pay-month {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-xs8-pay-pay {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-xs8-rank {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+
+  .icon-xs8-sort {
+    background-image: url("../images/sprite@2x-cf4a065167.png");
+    background-size: 324px 302px;
+  }
+}

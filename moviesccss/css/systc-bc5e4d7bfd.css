@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "SourceHanSerifCN-Medium";
+  src: url("../fonts/sourcehanserifcn-medium-ceaf967bc9.eot");
+  /* IE9 */
+  src: url("../fonts/sourcehanserifcn-medium-ceaf967bc9.eot") format("embedded-opentype"), 
+    url("../fonts/sourcehanserifcn-medium-d8204a49d9.woff") format("woff"), 
+    url("../fonts/sourcehanserifcn-medium-f89d3a828c.ttf") format("truetype"), 
+    url("../fonts/sourcehanserifcn-medium-e7918dde79.svg#source han serif cn medium") format("svg");
+  /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal;
+}

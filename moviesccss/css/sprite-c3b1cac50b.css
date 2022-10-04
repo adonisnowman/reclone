@@ -1,0 +1,93 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+
+.icon-gift-car {
+  background-image: url("../images/sprite-35acf26d17.png");
+  background-position: 0px 0px;
+  width: 96px;
+  height: 52px;
+}
+
+.icon-gift-coffe {
+  background-image: url("../images/sprite-35acf26d17.png");
+  background-position: -100px 0px;
+  width: 96px;
+  height: 52px;
+}
+
+.icon-gift-diamond {
+  background-image: url("../images/sprite-35acf26d17.png");
+  background-position: 0px -56px;
+  width: 96px;
+  height: 52px;
+}
+
+.icon-gift-flower {
+  background-image: url("../images/sprite-35acf26d17.png");
+  background-position: -100px -56px;
+  width: 96px;
+  height: 52px;
+}
+
+.icon-gift-house {
+  background-image: url("../images/sprite-35acf26d17.png");
+  background-position: 0px -112px;
+  width: 96px;
+  height: 52px;
+}
+
+.icon-gift-knife {
+  background-image: url("../images/sprite-35acf26d17.png");
+  background-position: -100px -112px;
+  width: 96px;
+  height: 52px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  .icon-gift-car {
+    background-image: url("../images/sprite@2x-177d04e5e8.png");
+    background-size: 196px 164px;
+  }
+
+  .icon-gift-coffe {
+    background-image: url("../images/sprite@2x-177d04e5e8.png");
+    background-size: 196px 164px;
+  }
+
+  .icon-gift-diamond {
+    background-image: url("../images/sprite@2x-177d04e5e8.png");
+    background-size: 196px 164px;
+  }
+
+  .icon-gift-flower {
+    background-image: url("../images/sprite@2x-177d04e5e8.png");
+    background-size: 196px 164px;
+  }
+
+  .icon-gift-house {
+    background-image: url("../images/sprite@2x-177d04e5e8.png");
+    background-size: 196px 164px;
+  }
+
+  .icon-gift-knife {
+    background-image: url("../images/sprite@2x-177d04e5e8.png");
+    background-size: 196px 164px;
+  }
+}

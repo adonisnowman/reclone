@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "HYDaSongJ";
+  src: url("../fonts/hydasongj-a47617fd08.eot");
+  /* IE9 */
+  src: url("../fonts/hydasongj-a47617fd08.eot") format("embedded-opentype"), 
+    url("../fonts/hydasongj-8834520950.woff") format("woff"), 
+    url("../fonts/hydasongj-b37e0ada55.ttf") format("truetype"), 
+    url("../fonts/hydasongj-7a68686c11.svg#hydasongj") format("svg");
+  /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal;
+}

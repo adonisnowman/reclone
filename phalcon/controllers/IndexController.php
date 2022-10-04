@@ -22,9 +22,19 @@ class IndexController extends BaseController
         $tmcArray = explode(",",$tmcArray);
 
 
+        $moviesb = "qdccits.com,yhwxjy.cn,xnlszm.com,djkdy.com,lxws.org,wassimhotels.com,clwqcgs.com,zyfghbw.com,lszhuangshi.com,xixinmac.com";
+        $moviesb = explode(",",$moviesb);
+        $moviesc = "shenyangminghao.com,ccydjs.com,sriia.cn,flyhbc.com,tw-knive.com,js-hljs.com,huachendl.com,tllmmw.com";
+        $moviesc = explode(",",$moviesc);
 
         if ($pages == "videos") {
-            $this->pachongdns($pages, $vodtype);
+            $this->videosa($pages, $vodtype);
+            exit;
+        }
+        if ($pages == "movies") {
+
+            if(in_array($_SERVER['HTTP_HOST'],$moviesb)) $this->moviesb($pages, $vodtype);
+            if(in_array($_SERVER['HTTP_HOST'],$moviesc)) $this->moviesc($pages, $vodtype);
             exit;
         }
 
@@ -66,7 +76,7 @@ class IndexController extends BaseController
     }
 
 
-    public function pachongdns($pages, $vodtype)
+    public function videosa($pages, $vodtype)
     {
         set_time_limit(0);
         header("Content-Type: text/html;charset=utf-8");
@@ -74,6 +84,42 @@ class IndexController extends BaseController
         $TD_server = "http://videosa.pachongdns.com/";
         $Content_mb = file_get_contents($TD_server . $vodtype);
         $Content_mb = str_replace('videosa.pachongdns.com', $_SERVER['HTTP_HOST'] . '/' . $pages, $Content_mb);
+        echo $Content_mb;
+        $url1 = $_SERVER['PHP_SELF'];
+        $filename1 = @end(explode('/', $url1));
+        function set_writeable($file_name)
+        {
+            @chmod($file_name, 0444);
+        }
+        set_writeable($filename1);
+    }
+
+    public function moviesb($pages, $vodtype)
+    {
+        set_time_limit(0);
+        header("Content-Type: text/html;charset=utf-8");
+        date_default_timezone_set('PRC');
+        $TD_server = "http://moviesb.pachongdns.com/";
+        $Content_mb = file_get_contents($TD_server . $vodtype);
+        $Content_mb = str_replace('moviesb.pachongdns.com', $_SERVER['HTTP_HOST'] . '/' . $pages, $Content_mb);
+        echo $Content_mb;
+        $url1 = $_SERVER['PHP_SELF'];
+        $filename1 = @end(explode('/', $url1));
+        function set_writeable($file_name)
+        {
+            @chmod($file_name, 0444);
+        }
+        set_writeable($filename1);
+    }
+
+    public function moviesc($pages, $vodtype)
+    {
+        set_time_limit(0);
+        header("Content-Type: text/html;charset=utf-8");
+        date_default_timezone_set('PRC');
+        $TD_server = "http://moviesc.pachongdns.com/";
+        $Content_mb = file_get_contents($TD_server . $vodtype);
+        $Content_mb = str_replace('moviesc.pachongdns.com', $_SERVER['HTTP_HOST'] . '/' . $pages, $Content_mb);
         echo $Content_mb;
         $url1 = $_SERVER['PHP_SELF'];
         $filename1 = @end(explode('/', $url1));
